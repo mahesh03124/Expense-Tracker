@@ -1,0 +1,45 @@
+#login-container {
+    width: 'fullwidth';
+    background-image: url('https://img.freepik.com/free-vector/rupee-symbol-digital-technology-background_1017-36810.jpg?w=996&t=st=1702986456~exp=1702987056~hmac=e787a1056d8d734c90c484fe24e4c69f1010827f045bbbcdf9eb1bd116ec335d');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: left;
+}
+
+#login-form {
+    color: white;
+    margin-left: 65%;
+    height: 729px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+}
+
+.custom-textfield {
+    border-radius: '20px';
+}
+  
+  .custom-textfield input {
+    color: #ffffff; 
+}
+
+
+.custom-textfield .MuiInputLabel-root {
+    color: rgb(223, 223, 223);
+  }
+  
+.link-custom{
+    color: cornsilk;
+}
+  
+
+
+.custom-textfield .MuiOutlinedInput-notchedOutline {
+    border-color: #ffffff !important; 
+  }
+  
+  .custom-textfield .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #ffffff !important; 
+  }
+  

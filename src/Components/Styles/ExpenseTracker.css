@@ -1,0 +1,54 @@
+.expense-container{
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: cornsilk;
+}
+
+.top-bar{
+    background-color: rgba(22, 255, 236, 0.233); 
+    backdrop-filter: blur(10px); 
+    color: cornsilk;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    gap: 30px; 
+}
+
+
+.sub-expense{
+    width: 250px;
+    height: 250px;
+    padding: '20px';
+    background-color: #2c3e50;
+    border-radius: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    width: 'fullwidth';
+    height: auto;
+    background-color: #2c3e50;
+    border: 2px solid #fff; 
+    border-radius: 20px;
+    color: cornsilk;
+}
+
+.custom-link{
+    color: cornsilk;
+    text-decoration: none ;
+}
+
+.custom-Link{
+    color: cornsilk;
+    text-decoration: none ;
+}

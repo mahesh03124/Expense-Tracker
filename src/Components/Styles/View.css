@@ -1,0 +1,29 @@
+.main-container{
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: cornsilk;
+    height: 729px;
+}
+
+.table-container1{
+    justify-content: center;
+    background-color: #2c3e50;
+    backdrop-filter: blur(20px); 
+    height: auto;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #fff; 
+    box-shadow: 10px 10px 10px 10px rgab(0,0,0,0.5);
+}
+
+.b1 {
+    color: white !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: 1500px;
+  }
+  
