@@ -15,7 +15,7 @@ const Login = () => {
   },[])
 
   const handleLogin = () => {
-    // Simple validation
+  
     if (username === '' || password === '') {
       setError('Please enter both username and password.');
       return;
@@ -35,14 +35,23 @@ const Login = () => {
 
   return (
   <div id='login-container' style={{height:'729px'}}>
+    <div id='title-form'>
+      <div style={{marginLeft:'15px',marginTop:'50px',marginRight:'25px'}}>
+    <h1 style={{fontSize:'400px',marginTop:'0.05px'}}>₹</h1>
+    </div>
+    <div style={{fontSize:'50px',marginTop:'100px'}}>
+    <h1>Expense</h1>
+    <h1>Tracker</h1>
+    </div>
+    </div>
     <div id='login-form'>
       <br /><br /><br /><br /><br />
     <Container  maxWidth="xs">
     <Typography variant="h4" align="center" gutterBottom>
-        Expense Tracker
+        User
       </Typography> <br /> 
       <Typography variant="h4" align="center" gutterBottom>
-        Login
+        Sign-In
       </Typography>
       {error && <Typography color="error">{error}</Typography>}
       <TextField

@@ -1,19 +1,30 @@
 #login-container {
     width: 'fullwidth';
-    background-image: url('https://img.freepik.com/free-vector/rupee-symbol-digital-technology-background_1017-36810.jpg?w=996&t=st=1702986456~exp=1702987056~hmac=e787a1056d8d734c90c484fe24e4c69f1010827f045bbbcdf9eb1bd116ec335d');
+    background-image: linear-gradient(to left, #2c3e50, #4ca1af);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
     background-position-x: left;
+    display: flex;
+    justify-items:center;
 }
 
 #login-form {
     color: white;
-    margin-left: 65%;
+    margin-left: 18%;
     height: 729px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(10px); 
+}
+
+#title-form{
+  color: white;
+  height: 700px;
+  width: 800px;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
 }
 
 .custom-textfield {
