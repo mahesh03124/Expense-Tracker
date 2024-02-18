@@ -1,54 +1,172 @@
-.expense-container{
-    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Common styles */
+.main-container,
+.table-container1,
+#login-container,
+#login-form,
+#title-form,
+.custom-textfield,
+.expense-container,
+.top-bar,
+.sub-container,
+.table-container,
+.custom-link,
+.custom-Link {
     color: cornsilk;
 }
 
-.top-bar{
+.main-container {
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.table-container1 {
+    justify-content: center;
+    background-color: #2c3e50;
+    backdrop-filter: blur(20px);
+    height: auto;
+    border-radius: 20px;
+    margin: 10px;
+    border: 2px solid #fff;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#login-container {
+    width: 'fullwidth'; 
+    background-image: linear-gradient(to left, #2c3e50, #4ca1af);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    display: flex;
+    justify-items: center; 
+}
+
+#login-form {
+    margin-left: 18%;
+    min-height: 100vh;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+#title-form {
+    height: 700px;
+    width: 800px;
+    margin: 10px;
+    display: flex;
+}
+
+.custom-textfield,
+.custom-textfield input,
+.custom-textfield .MuiInputLabel-root,
+.custom-textfield .MuiOutlinedInput-notchedOutline,
+.custom-textfield .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.custom-textfield .MuiInputLabel-root {
+    color: rgb(223, 223, 223);
+}
+
+.custom-textfield .MuiOutlinedInput-notchedOutline,
+.custom-textfield .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #ffffff !important;
+}
+
+.link-custom,
+.custom-link,
+.custom-Link {
+    color: cornsilk;
+    text-decoration: none;
+}
+
+.expense-container {
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between; 
     background-color: rgba(22, 255, 236, 0.233); 
     backdrop-filter: blur(10px); 
     color: cornsilk;
 }
 
+.top-bar > div {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.top-bar > div:last-child {
+    margin-right: 20px; 
+}
+
+
 .sub-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; 
-    gap: 30px; 
+    justify-content: space-evenly;
+    gap: 30px;
 }
 
-
-.sub-expense{
-    width: 250px;
-    height: 250px;
+.sub-expense {
+    width: 200px;
+    height: 200px;
     padding: '20px';
     background-color: #2c3e50;
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
+    border: 2px solid #00fffc;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.30);
+    transition: 1000ms all ease-in-out;
+    transform-origin: center left;
+    overflow: hidden;
+}
+
+.sub-expense:hover {
+    animation: pulse 2s infinite;
+    font-weight: bold;
+    transform: translateZ(20px);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    position: relative;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .table-container {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 70px;
     margin-right: 70px;
-    width: 'fullwidth';
+    width: auto;
     height: auto;
     background-color: #2c3e50;
-    border: 2px solid #fff; 
+    border: 2px solid #00fffc;
     border-radius: 20px;
     color: cornsilk;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.30);
 }
 
-.custom-link{
-    color: cornsilk;
-    text-decoration: none ;
-}
-
-.custom-Link{
-    color: cornsilk;
-    text-decoration: none ;
+.filter-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1%;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography, Container} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import './Styles/Login.css'
+import './Styles/ExpenseTracker.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -39,7 +39,7 @@ const Register = () => {
   };
 
   return (
-    <div id='login-container' style={{height:'729px'}}>
+    <div id='login-container'>
       <div id='title-form'>
       <div style={{marginLeft:'15px',marginTop:'50px',marginRight:'25px'}}>
     <h1 style={{fontSize:'400px',marginTop:'0.05px'}}>₹</h1>

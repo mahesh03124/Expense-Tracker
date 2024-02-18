@@ -1,0 +1,12 @@
+.graph-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: auto;
+    height: auto;
+}
+
+.graph-sub-container{
+    border: 1px solid blue;
+    height: 40%;
+}

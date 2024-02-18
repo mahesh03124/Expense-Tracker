@@ -9,7 +9,7 @@ import DialogTitle from '@mui/joy/DialogTitle';
 import Stack from '@mui/joy/Stack';
 
 
-const AddTransaction = ({ open, handleClose, handleChange, handleAddTransaction, transaction, editingTransaction, editing }) => {
+const AddTransaction = ({ open, handleClose, handleChange, handleAddTransaction, transaction, editing }) => {
     
   return (
 
