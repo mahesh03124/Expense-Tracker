@@ -137,9 +137,9 @@ const ExpenseTracker = () => {
 
 
   return (
-    <div className="expense-container" style={{ marginTop: '0px', width: 'fullwidth', height: '729px' }}>
+    <div className="expense-container" >
       <Topbar />
-      <div className='sub-container' component="main" style={{maxWidth:'100%'}}>
+      <div className='sub-container' component="main" >
         <CssBaseline />
         <div className='sub-expense'> <br />
           <Typography variant="h5" align="center">
@@ -198,7 +198,7 @@ const ExpenseTracker = () => {
     )}
     {filteredTransactions.length > 0 && (
       <TableRow>
-        <TableCell style={{ color: 'white', width: '200px' }} align='center'>Sl No</TableCell>
+        <TableCell style={{ color: 'white', width: '10%' }} align='center'>Sl No</TableCell>
         <TableCell style={{ color: 'white' }} align='center'>Description</TableCell>
         <TableCell style={{ color: 'white' }} align='center'>Amount</TableCell>
         <TableCell style={{ color: 'white' }} align='center'>Date</TableCell>
@@ -215,14 +215,14 @@ const ExpenseTracker = () => {
       </TableRow>
     ) : (
       filteredTransactions.slice(0, 5).map((ft, index) => (
-        <TableRow key={ft.id} style={{ borderBottom: 'none' }}>
-          <TableCell style={{ color: 'white', width: '200px' }} align='center'>{index + 1}</TableCell>
+        <TableRow key={ft.id} >
+          <TableCell style={{ color: 'white' }} align='center'>{index + 1}</TableCell>
           <TableCell style={{ color: 'white' }} align='center'>{ft.description}</TableCell>
           <TableCell style={{ color: 'white' }} align='center'>
             {ft.type === 'income' ? `+ ₹${ft.amount}` : `- ₹${ft.amount}`}
           </TableCell>
           <TableCell style={{ color: 'white' }} align='center'>{new Date(ft.date).toLocaleDateString()}</TableCell>
-          <TableCell style={{ color: 'white', width: '200px' }} align='center'>{ft.account}</TableCell>
+          <TableCell style={{ color: 'white' }} align='center'>{ft.account}</TableCell>
         </TableRow>
       ))
     )}
