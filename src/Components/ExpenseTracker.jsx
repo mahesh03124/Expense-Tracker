@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CssBaseline, Typography } from '@mui/material';
+import { CssBaseline, Typography,TableContainer } from '@mui/material';
 import AddTransaction from './AddTransaction';
 import { Link } from 'react-router-dom';
 import Topbar from './Topbar';
@@ -137,39 +137,40 @@ const ExpenseTracker = () => {
 
 
   return (
-    <div className="expense-container" >
+    <div className="main-container" >
       <Topbar />
       <div className='sub-container' component="main" >
         <CssBaseline />
-        <div className='sub-expense'> <br />
+        <div className='sub-expense'>
           <Typography variant="h5" align="center">
-            <br /> BALANCE <br /> ₹ {calculateBalance().toFixed(2)}
+             BALANCE <br /> ₹ {calculateBalance().toFixed(2)}
           </Typography>
         </div>
         <div className='sub-expense'>
           <Typography variant="h5" align="center" >
-            <br /><br /> CASH  <br /> ₹ {accountBalances.cash.toFixed(2)}</Typography>
+             CASH  <br /> ₹ {accountBalances.cash.toFixed(2)}</Typography>
         </div>
         <div className='sub-expense'>
-          <Typography variant="h5" align="center"><br /><br /> BANK <br /> ₹ {accountBalances.bank.toFixed(2)}
+          <Typography variant="h5" align="center"> BANK <br /> ₹ {accountBalances.bank.toFixed(2)}
           </Typography>
         </div>
   
         <div className='sub-expense' style={{cursor:'pointer'}} onClick={handleOpen}>
-          <Typography variant="h5" align="center"> <br /><br /> ADD NEW <br /> TRANSACTION
+          <Typography variant="h5" align="center">  ADD NEW <br /> TRANSACTION
           </Typography>
         </div>
   
         
         <div className='sub-expense'>
           <Link to='ViewTransaction' className='custom-link'>
-            <Typography variant="h5" align="center"> <br /> <br /> VIEW  ALL <br /> TRANSACTION
+            <Typography variant="h5" align="center">  VIEW  ALL <br /> TRANSACTION
             </Typography>
         </Link>
         </div>
       </div>
   
       <div className='table-container'>
+      <TableContainer>
 <Table>
   <TableHead>
     {rtransactions.length > 0 && (
@@ -228,6 +229,7 @@ const ExpenseTracker = () => {
     )}
   </TableBody>
 </Table>
+</TableContainer>
       </div>
   
       <AddTransaction

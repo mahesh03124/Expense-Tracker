@@ -87,42 +87,11 @@ const PrintTranscation = () => {
     <div className='main-container'>
       <Topbar />
       <div className='filter-buttons'>
-        <Button variant="contained" onClick={handleFilterLast7Days}>Last 7 Days</Button>
-        <Button variant="contained" onClick={handleFilterLast1Month}>Last 1 Month</Button>
-        <Button variant="contained" onClick={handleFilterLast3Months}>Last 3 Months</Button>
-        <TextField
-  id="start-date"
-  label="From"
-  type="date"
-  InputLabelProps={{
-    shrink: true,
-    style: { color: 'white' }
-  }}
-  InputProps={{
-    style: { color: 'white' } 
-  }}
-  value={startDate}
-  onChange={(e) => setStartDate(e.target.value)}
-  max={new Date().toISOString().split('T')[0]}
-/>
+        <div className='btns'><Button variant="contained" onClick={handleFilterLast7Days}>Last 7 Days</Button></div>
+        <div className='btns'><Button variant="contained" onClick={handleFilterLast1Month}>Last 1 Month</Button></div>
+        <div className='btns'><Button variant="contained" onClick={handleFilterLast3Months}>Last 3 Months</Button></div>
 
-<TextField
-  id="end-date"
-  label="To"
-  type="date"
-  InputLabelProps={{
-    shrink: true,
-    style: { color: 'white' } 
-  }}
-  InputProps={{
-    style: { color: 'white' } 
-  }}
-  value={endDate}
-  onChange={(e) => setEndDate(e.target.value)}
-  max={new Date().toISOString().split('T')[0]}
-/>
-
-        <div>
+        <div className='btns'> 
         <Checkbox
           checked={filterCash}
           onChange={(e) => setFilterCash(e.target.checked)}
@@ -130,7 +99,7 @@ const PrintTranscation = () => {
         />
         <label>Cash</label>
         </div>
-        <div>
+        <div className='btns'>
         <Checkbox
           checked={filterBank}
           onChange={(e) => setFilterBank(e.target.checked)}
@@ -138,9 +107,46 @@ const PrintTranscation = () => {
         />
         <label>Bank</label>
         </div>
-        <Button variant="contained" color="success" onClick={handlePrintPDF}>Print</Button>
-        <Link to='/ExpenseTracker/ViewTransaction' className='custom-link'><Button variant="contained" color="error">Cancel</Button></Link>
+        <div className='btns'>
+        <TextField
+          id="start-date"
+          label="From"
+          type="date"
+          InputLabelProps={{
+            shrink: true,
+            style: { color: 'white' }
+          }}
+          InputProps={{
+            style: { color: 'white' } 
+          }}
+          value={startDate}
+          onChange={(e) => setStartDate(e.target.value)}
+          max={new Date().toISOString().split('T')[0]}
+        />
+        </div>
+        <div className='btns'>
+        <TextField
+          id="end-date"
+          label="To"
+          type="date"
+          InputLabelProps={{
+            shrink: true,
+            style: { color: 'white' } 
+          }}
+          InputProps={{
+            style: { color: 'white' } 
+          }}
+          value={endDate}
+          onChange={(e) => setEndDate(e.target.value)}
+          max={new Date().toISOString().split('T')[0]}
+        />
+        </div>
+        <div className='btns'>
+        <Button variant="contained" color="success" onClick={handlePrintPDF}>Print</Button></div>
+        <div className='btns'>
+        <Link to='/ExpenseTracker/ViewTransaction' className='custom-link'><Button variant="contained" color="error">Cancel</Button></Link></div>
       </div>
+
 
       <div className='table-container1'>
         <TableContainer>

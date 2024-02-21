@@ -65,9 +65,6 @@
   align-items: center;
 }
 
-.css-nzinn5-MuiContainer-root {
-  /* padding: 1rem; */
-}
 
 .custom-textfield,
 .custom-textfield input,
@@ -92,13 +89,6 @@
 .custom-Link {
   color: cornsilk;
   text-decoration: none;
-}
-
-.expense-container {
-  background-image: linear-gradient(to right, #2c3e50, #4ca1af);
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
 }
 
 .top-bar {
@@ -127,21 +117,7 @@
   gap: 30px;
 }
 
-.sub-expense {
-  width: 200px;
-  height: 200px;
-  padding: "20px";
-  background-color: #2c3e50;
-  border-radius: 20px;
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #00fffc;
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
-  transition: 1000ms all ease-in-out;
-  transform-origin: center left;
-  overflow: hidden;
-}
+
 
 .sub-expense:hover {
   font-weight: bold;
@@ -159,12 +135,13 @@
 }
 
 .table-container {
-  margin: 1% 1% 2% 2%;
+  margin: 2% 1% 0% 1%;
   background-color: #2c3e50;
   border: 2px solid #00fffc;
   border-radius: 20px;
   color: cornsilk;
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 .css-rqglhn-MuiTable-root:last-child {
@@ -178,6 +155,30 @@
   align-items: center;
   margin-top: 1%;
 }
+
+.css-rqglhn-MuiTable-root:last-child {
+  border-bottom: hidden;
+}
+
+.sub-expense {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  padding: "20px";
+  background-color: #2c3e50;
+  border-radius: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #00fffc;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+  transition: 1000ms all ease-in-out;
+  transform-origin: center left;
+  overflow: hidden;
+}
+
+
 
 @keyframes pulse {
   0%,
@@ -195,4 +196,43 @@
     -webkit-backdrop-filter: blur(0);
     backdrop-filter: blur(0);
   }
+
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .sub-expense {
+    width: 70%;
+    height: auto;
+    padding: "20px";
+    background-color: #2c3e50;
+    border-radius: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #00fffc;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    transition: 1000ms all ease-in-out;
+    transform-origin: center left;
+    overflow: hidden;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .btns{
+    margin-top: 3%;
+  }
 }
+
+
+
