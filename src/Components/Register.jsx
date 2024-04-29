@@ -61,6 +61,7 @@ const Register = () => {
             Sign-Up
           </Typography>
           {error && <Typography color="error">{error}</Typography>}
+          <form>
           <TextField
             label="Username"
             variant="outlined"
@@ -92,6 +93,7 @@ const Register = () => {
           />{" "}
           <br /> <br />
           <Button
+            type="submit"
             variant="contained"
             color="primary"
             fullWidth
@@ -99,6 +101,7 @@ const Register = () => {
           >
             Register
           </Button>
+          </form>
           <Typography
             variant="body2"
             align="center"

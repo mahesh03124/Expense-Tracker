@@ -56,6 +56,7 @@ const Login = () => {
             Sign-In
           </Typography>
           {error && <Typography color="error">{error}</Typography>}
+          <form>
           <TextField
             label="Username"
             variant="outlined"
@@ -77,6 +78,7 @@ const Login = () => {
           />{" "}
           <br /> <br />
           <Button
+            type="submit"
             variant="contained"
             color="primary"
             fullWidth
@@ -84,6 +86,7 @@ const Login = () => {
           >
             Login
           </Button>
+          </form>
           <Typography
             variant="body2"
             align="center"

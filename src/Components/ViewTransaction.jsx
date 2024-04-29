@@ -112,7 +112,17 @@ const ViewTransaction = () => {
     <div>
       <div className='main-container'>
         <Topbar />
+        <div style={{margin: "10px"}}>
+        <Link to='/ExpenseTracker'>
+          <Button variant="contained" color="primary" className='b1'>
+            BACK
+          </Button>
+        </Link>
+        <Link to='PrintTransaction'>
+          <Button variant="contained" color="primary" style={{ marginLeft: '5%' }}>Print</Button>
+        </Link></div>
         <div className='table-container1'>
+          
           <TableContainer>
             <Table >
               <TableHead>
@@ -171,14 +181,7 @@ const ViewTransaction = () => {
           editing={editing}
         />
 
-        <Link to='/ExpenseTracker'>
-          <Button variant="contained" color="primary" className='b1'>
-            BACK
-          </Button>
-        </Link>
-        <Link to='PrintTransaction'>
-          <Button variant="contained" color="primary" style={{ marginLeft: '5%' }}>Print</Button>
-        </Link>
+        
       </div>
     </div>
 
